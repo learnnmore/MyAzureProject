@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Document</title>
+</head>
+<body>
+<div class="container">
+    {% if download_url %}
+        <h2>Download your document</h2>
+        <p>Click the link below to download your document:</p>
+        <a href="{{ download_url }}" target="_blank">Download Document</a>
+    {% else %}
+        <h2>Error</h2>
+        <p>{{ error_message }}</p>
+    {% endif %}
+</div>
+</body>
+</html>
